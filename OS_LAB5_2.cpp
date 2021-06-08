@@ -36,7 +36,7 @@ void* func1(void* ) {
     return NULL;
 }
 int main() {
-	sem = sem_open("/sem", O_CREAT, 0644, 1);
+	sem = sem_open("/sem", O_CREAT, 0644, 10);
     fileName = fopen("test.txt","a"); //"a" - дописывает инф. к конфу файла
 	pthread_t thread1;
 	pthread_create(&thread1, NULL, func1, NULL);
